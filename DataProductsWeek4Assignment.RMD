@@ -1,0 +1,48 @@
+---
+title: "DataProducts  Week4 - Reproducible Pitch"
+author: "Rabeek Kanavapeer"
+date: "5/14/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(jpeg)
+cap1 <- readJPEG("Week4_cap1.jpg",native=TRUE)
+cap3 <- readJPEG("Week4_cap3.jpg",native=TRUE)
+```
+
+## Data Products - Week 4 - Reproducible Pitch
+
+This slide is for the data science coursera course  data products for week 4 assignment. As part of this, I have created a shiny app and deployed it on the shiny server at and link is available at  https://rabeekraja.shinyapps.io/coviddatapresentation/. Code can be found at github at https://github.com/rabeekraja/dataproductsweek4.
+
+
+## Overview
+
+This project downloads previous date from current system date from European Centre for Disease Prevention and Control site and present COVID-19 cases worldwide.
+
+This site having following things,
+  1. Dynamic drop down for list of countries for a continent
+  2. Tab of Summary
+  3. Covid-19 summary for selected Continent & Country
+  4. Covid-19 data sets for a selected Country
+  5. Plotly interactive plot 
+  6. +Ve cases for each day
+  7. Deaths each day
+  8. Cumulative Cases
+  9. Cumulative Deaths
+
+## Covid-19 Summary Screen shot 
+
+```{r}
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
+rasterImage(cap1,0,0,1,1)
+```
+
+
+## Covid-19 Plotly Screen shot 
+
+```{r}
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
+rasterImage(cap3,0,0,1,1)
+```
