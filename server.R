@@ -28,9 +28,9 @@ if (!file.exists(filename))
 colClass <- c("date","integer","integer","integer","integer","integer","character","character","chracter","integer","character")
 covidcases<- read.xlsx(filename,sheet=1)
 #Convert to Datesas.character(covidcases$dateRep)
-#covidcases$dateRep<-as.Date(covidcases$dateRep-25569, origin="1970-01-01")
+covidcases$dateRep<-as.Date(covidcases$dateRep-25569, origin="1970-01-01")
 #Fix needed post May 16th Data as date format changed
-covidcases$dateRep<-as.Date(covidcases$dateRep,"%d/%m/%Y")
+#covidcases$dateRep<-as.Date(covidcases$dateRep,"%d/%m/%Y")
 #print(covidcases$dateRep)
 df_countrydata <- covidcases[c(7,11)]
 df_pre <- covidcases[c(1,5,6,7,10,11)]
